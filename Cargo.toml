@@ -1,0 +1,20 @@
+[package]
+name = "optargs"
+version = "0.1.2"
+authors = ["Jonathan Kelley <jkelleyrtp@gmail.com>"]
+edition = "2018"
+description = "Easily create macros for functions with optional arguments"
+keywords = ["optional", "function", "arguments", "macro", "const"]
+license = "MIT OR Apache-2.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+optargs-macro = { path = "./optargs-macro", version = "0.1.1" }
+
+[profile.dev]
+debug = 0
+
+[profile.release]
+incremental = true
+debug = 0 # Set this to 1 or 2 to get more useful backtraces in debugger.
